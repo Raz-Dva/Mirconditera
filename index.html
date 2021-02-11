@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mirkonditera</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.selectBox/jquery.selectBox.css" rel="stylesheet" />
+    <link href="css/swiper-jquery/swiper.min.css" rel="stylesheet" />
+    <link href="css/css-icon/styles.css" rel="stylesheet" />
+    <link href="css/main-style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <!--======================= navbar ==================-->
+        <nav class="navbar-inverse navbar-fixed-top navbar navbar_top">
+          <div class="container">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
+              <!--======================== menu in navbar ================-->
+              <ul class="navbar-nav nav navbar_header">
+                <li>
+                  <a class="" href="">
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="" href="">
+                    <span>Delivery and payment</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="" href="">
+                    <span>Contacts</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="" href="">
+                    <span>About us</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--=======================navbar and==================-->
+        <div class="navbar_left_menu">
+          <div class="container">
+            <ul class="info_user_block">
+              <!--============an unauthorized user==================-->
+              <li>
+                <a href="#" class="btn_avtoriz">
+                  <i class="icon-user"></i>
+                  <span>Login</span>
+                </a>
+                <!--============window autorize==================-->
+                <div class="box_popover" id="modal_auth">
+                  <button class="close">
+                    <i class="glyphicon glyphicon-remove"></i>
+                  </button>
+                  <div class="head_popover overflow_hid">
+                    <p class="head_autorize color_brown pull-left">
+                      Authorization
+                    </p>
+                    <a href="" class="link_reg underline pull-right color_pink"
+                      >Register</a
+                    >
+                  </div>
+                  <form id="loginForm" class="login_form form_default">
+                    <div class="form-group has-success">
+                      <input
+                        type="text"
+                        class="form-control mask-phone"
+                        name=""
+                        placeholder="Your phone"
+                      />
+                      <div class="help-block"></div>
+                    </div>
+                    <div class="form-group has-error">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name=""
+                        placeholder="Your password"
+                      />
+                      <div class="help-block">This field must be filled in</div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="checkbox"
+                        id="loginform-rememberme"
+                        name="LoginForm[rememberMe]"
+                        value="1"
+                        checked=""
+                      />
+                      <label for="loginform-rememberme">Remember me</label>
+                      <a class="forgot_password color_pink underline" href="#"
+                        >Forgot your password?</a
+                      >
+                      <div class="help-block"></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn bckg_btn_pink btn_enter">
+                        Enter
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <!--============window autorize and==================-->
+              </li>
+              <li>
+                <a class="" href="">
+                  <span>Register</span>
+                </a>
+              </li>
+              <!--=============authorized user==================-->
+              <!--<li>
+                        <a href="" class="btn_avtoriz underline oblique_delivery">
+                            <i class="icon-user"></i>
+                            <span>Goncharov Ivan Nikolaevich</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="underline" href="#">
+                            <span>Enter</span>
+                        </a>
+                    </li>-->
+              <!--====================================================-->
+              <li class="item_basket_head">
+                <a href="" class="btn_basket_head">
+                  <i class="icon-shoping-cart"></i>
+                  <span>7000$</span>
+                  <span class="badge">110</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <!--=====================form, logo, tell in  header =====================-->
+            <div class="col-md-4 col-lg-3">
+              <form class="navbar-form form_search">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-default btn_search top_center"
+                  >
+                    <i class="icon-search pull-left"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4 col-lg-6 text-center">
+              <a href="" class="block_logo">
+                <img src="images/mir_conditera_logo.png" alt="" />
+              </a>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="box_tell-header">
+                <button class="btn_call_back bckg_btn_pink">
+                  <i class="icon-phone top_center"></i>Callback
+                </button>
+                <!--============window call back==================-->
+                <div class="box_popover" id="modal_call_back">
+                  <button class="close">
+                    <i class="glyphicon glyphicon-remove"></i>
+                  </button>
+                  <form class="call_back_form form_default">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        placeholder="Your name"
+                      />
+                      <div class="help-block"></div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control mask-phone"
+                        name=""
+                        placeholder="Your phone"
+                      />
+                      <div class="help-block"></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn bckg_btn_pink btn_enter">
+                        Order a call
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <!--=========== window call back and ==================-->
+                <div class="block_tell overflow_hid">
+                  <p class="tell"><a href="">+38 (066) 138-78-57</a></p>
+                  <p class="tell">+38 (067) 525-26-26</p>
+                  <p class="tell">+38 (099) 286-98-98</p>
+                  <p class="tell">+38 (093) 703-66-60</p>
+                </div>
+              </div>
+            </div>
+            <!--==================== large menu=====================-->
+            <div class="col-xs-12">
+              <ul class="menu_lg" id="main-menu">
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-decor.png" alt=""
+                    /></span>
+                    <span class="text_menu">Products for decoration</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="">Tool for modeling mastic and marzipan</a>
+                    </li>
+                    <li><a href="">The icing</a></li>
+                    <li><a href="">Food additive</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                  </ul>
+                </li>
+
+                <!--===================================================-->
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-instruments.png" alt=""
+                    /></span>
+                    <span class="text_menu">Tools and inventory</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="">Colored sugar</a></li>
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                    <li>
+                      <a href="">tool for modeling mastic and marzipan</a>
+                    </li>
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Dietary supplements</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-ingridients.png" alt=""
+                    /></span>
+                    <span class="text_menu">Ingredients</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="">Dietary supplements</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li>
+                      <a href="">Tool for modeling mastic and marzipan</a>
+                    </li>
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-colors.png " alt=""
+                    /></span>
+                    <span class="text_menu">Food colorants</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Dietary supplements</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li>
+                      <a href="">tool for modeling mastic and marzipan</a>
+                    </li>
+
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-equipment.png " alt=""
+                    /></span>
+                    <span class="text_menu">Hardware</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Dietary supplements</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                    <li>
+                      <a href="">tool for modeling mastic and marzipan</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-print.png " alt=""
+                    /></span>
+                    <span class="text_menu">printing on sax paper</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="">tool for modeling mastic and marzipan</a>
+                    </li>
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Dietary supplements</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-packaging.png " alt=""
+                    /></span>
+                    <span class="text_menu">Packaging</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li>
+                      <a href="">tool for modeling mastic and marzipan</a>
+                    </li>
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Dietary supplements</a></li>
+
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon_menu"
+                      ><img src="images/icons/category-rent.png " alt=""
+                    /></span>
+                    <span class="text_menu">inventory rental</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="">Icing</a></li>
+                    <li><a href="">Dietary supplements</a></li>
+                    <li><a href="">Chocolate and glazes</a></li>
+                    <li><a href="">Gels</a></li>
+                    <li><a href="">Colored sugar</a></li>
+                    <li><a href="">Fillers</a></li>
+                    <li><a href="">Flour</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!--==================== large menu and=====================-->
+          </div>
+        </div>
+      </header>
+      <!--============================== HEADER and===================-->
+      <main>
+        <div class="banner text-center">
+          <img src="images/other/banner.jpg" alt="" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <!--===============decorative header==================-->
+              <div class="box_head">
+                <span class="decor_line"></span>
+                <h2 class="main_head">Novelties</h2>
+              </div>
+              <!--======================== slider news ============-->
+              <div class="swiper_wrap">
+                <div class="swiper-container swiper-main slider_news">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/slide_img1.jpg" alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Beatae deleniti est et eum iure, modi possimus
+                        sint voluptates!
+                      </a>
+                      <div class="slider_choose">
+                        <p class="slider_select">50$</p>
+                        <select
+                          class="form-control slider_select select"
+                          title=""
+                        >
+                          <option>Select the product price</option>
+                          <option>100 cm</option>
+                          <option>Lorem ipsum dolor sit amet</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to cart
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/480_s.jpg" alt="" class="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magic ultra white 0.5 kg Magic
+                        colors UA</a
+                      >
+                      <div class="slider_choose">
+                        <p class="slider_select">500g</p>
+                        <p class="slider_cost">50$</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to cart
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/755.jpg" alt="" class="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling</a
+                      >
+                      <div class="slider_choose">
+                        <p class="slider_select">10cm</p>
+                        <p class="slider_cost">50$</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/banner.jpg" alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5kg Magic colors
+                        UA</a
+                      >
+                      <div class="slider_choose">
+                        <select
+                          class="form-control slider_select select"
+                          title=""
+                        >
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <p class="slider_cost">50$</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/755.jpg" alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5kg Magic colors
+                        UA</a
+                      >
+                      <div class="slider_choose">
+                        <select
+                          class="form-control slider_select select"
+                          title=""
+                        >
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <p class="slider_cost">50$</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_arrow_slide">
+                  <div
+                    class="swiper-button-prev icon-left-open-big pull-left but_news_prev"
+                  ></div>
+                  <div
+                    class="swiper-button-next icon-right-open-big pull-right but_news_next"
+                  ></div>
+                </div>
+              </div>
+              <!--======================== slider news and============-->
+              <div class="box_head">
+                <span class="decor_line"></span>
+                <h2 class="main_head">Popular product</h2>
+              </div>
+              <!--======================== slider popular product ============-->
+              <div class="swiper_wrap">
+                <div class="swiper-container swiper-main swiper_pop">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/slide_img1.jpg " alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5 kg Magic
+                        colors UA</a
+                      >
+                      <div class="slider_choose">
+                        <p class="slider_select">500 timing</p>
+                        <p class="slider_cost">50 UAH</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/480_s.jpg" alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5kg Magic colors
+                        UA</a
+                      >
+                      <div class="slider_choose">
+                        <select
+                          class="form-control slider_select select"
+                          title=""
+                        >
+                          <option>option 1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <p class="slider_cost">50 UAH</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/755.jpg " alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5 kg Magic
+                        colors UA</a
+                      >
+                      <div class="slider_choose">
+                        <select
+                          class="form-control slider_select select"
+                          title=""
+                        >
+                          <option>option 1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <p class="slider_cost">50 UAH</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/banner.jpg " alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5 kg Magic
+                        colors UA</a
+                      >
+                      <div class="slider_choose">
+                        <select
+                          class="form-control slider_select select"
+                          title=""
+                        >
+                          <option>option 1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <p class="slider_cost">50 UAH</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="slider_block_img">
+                        <img src="images/other/755.jpg " alt="" />
+                      </a>
+                      <a href="" class="slider_text ellipsis"
+                        >Mastic for modeling Magiculata white 0.5 kg Magic
+                        colors UA</a
+                      >
+                      <div class="slider_choose">
+                        <p class="slider_select">500 timing</p>
+                        <p class="slider_cost">50 UAH</p>
+                      </div>
+                      <button class="btn slider_btn bckg_btn_pink">
+                        Add to car
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_arrow_slide">
+                  <div
+                    class="swiper-button-prev icon-left-open-big pull-left but_pop_prev"
+                  ></div>
+                  <div
+                    class="swiper-button-next icon-right-open-big pull-right but_pop_next"
+                  ></div>
+                </div>
+              </div>
+              <!--======================== slider popular product and============-->
+              <div class="box_head">
+                <span class="decor_line"></span>
+                <h2 class="main_head">A store for implementing your ideas</h2>
+              </div>
+              <!--========================A store for implementing your ideas============-->
+              <div class="text-center block_advantages">
+                <div class="descript_text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Animi consectetur possimus odit totam culpa expedita quis
+                    cupiditate? Sit rerum corporis totam recusandae itaque
+                    accusantium? Impedit qui laboriosam fuga nam accusantium!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quia ipsa accusantium officiis in itaque eos fugiat nihil
+                    quas deserunt saepe, officia aliquam doloremque dolor
+                    similique consequatur nostrum culpa commodi cum! Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                    dolorem omnis ratione! Necessitatibus cumque placeat quos
+                    eaque magni incidunt maiores, nesciunt odit asperiores!
+                    Repellat temporibus a reprehenderit totam ab soluta!
+                  </p>
+                </div>
+                <p class="descript_text bold_text">
+                  With us, the process of creating your sweet masterpieces will
+                  be brighter, more fun and, of course, more enjoyable!
+                </p>
+              </div>
+              <div class="row advantages">
+                <div class="col-lg-3 col-sm-6 col_advantages">
+                  <div class="advantages_box">
+                    <div class="advantages_img">
+                      <img src="images/other/advantages.png " alt="" />
+                    </div>
+                    <p class="advantages_head">Product Quality</p>
+                    <p class="advantages_text">
+                      We guarantee the quality of all products
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col_advantages">
+                  <div class="advantages_box">
+                    <div class="advantages_img">
+                      <img src="images/other/advantages.png " alt="" />
+                    </div>
+                    <p class="advantages_head">Available prices</p>
+                    <p class="advantages_text">
+                      Our products are available for everyone
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col_advantages">
+                  <div class="advantages_box">
+                    <div class="advantages_img">
+                      <img src="images/other/advantages.png " alt="" />
+                    </div>
+                    <p class="advantages_head">Delivery</p>
+                    <p class="advantages_text">
+                      We deliver all over Ukraine day to day
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col_advantages">
+                  <div class="advantages_box">
+                    <div class="advantages_img">
+                      <img src="images/other/advantages.png " alt="" />
+                    </div>
+                    <p class="advantages_head">Service</p>
+                    <p class="advantages_text">
+                      We try our best for You every day
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--=============================== head Reviews ======================================-->
+              <div class="box_head">
+                <span class="decor_line"></span>
+                <a href="" class="main_head">Reviews</a>
+              </div>
+              <!--=============================== Reviews ======================================-->
+              <div class="overflow_hid">
+                <div class="reviews">
+                  <div class="review_block">
+                    <i class="icon-quote"></i>
+                    <div class="review_head">
+                      <div class="review_about">
+                        <span class="color_brown">Reviews</span>
+                        <a href="" class="color_pink underline">Satin Ice</a>
+                      </div>
+                      <div class="review_stars_block">
+                        <ul class="static_stars">
+                          <li class="star_active"><i class="icon-star"></i></li>
+                          <li class="star_active"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="review_text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus eligendi est, facilis illo incidunt iste libero
+                      magnam modi necessitatibus nesciunt nisi quae quas
+                      quibusdam quos ratione tenetur ut veritatis? Ipsa.
+                    </div>
+                    <div class="review_bottom">
+                      <p class="review_author">Vladimir Semyonych</p>
+                      <p class="review_date text-right">24.05.2017</p>
+                    </div>
+                  </div>
+                  <div class="review_block">
+                    <i class="icon-quote"></i>
+                    <div class="review_head">
+                      <div class="review_about">
+                        <span class="color_brown">Reviews</span>
+                        <a href="" class="color_pink underline"
+                          >Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Ad adipisci aliquid amet
+                        </a>
+                      </div>
+                      <div class="review_stars_block">
+                        <ul class="static_stars">
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                          <li class="star_grey"><i class="icon-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="review_text">
+                      Thank you, the service is good. The girl immediately
+                      understood what I needed, advised the product, entered the
+                      situation. I will buy here.
+                    </div>
+                    <div class="review_bottom">
+                      <p class="review_author">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                      </p>
+                      <p class="review_date text-right">24.05.2017</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--=============================== Reviews and ======================================-->
+              <div class="box_head">
+                <span class="decor_line"></span>
+                <a href="" class="main_head">Blog</a>
+              </div>
+              <!--=============================== blog ======================================-->
+              <div class="row blog">
+                <div class="col-lg-3 col-sm-6">
+                  <div class="blog_block">
+                    <a href="" class="blog_block_img">
+                      <img src="images/other/755.jpg" alt="" />
+                    </a>
+                    <a
+                      href=""
+                      class="color_pink underline blog_block_head ellipsis"
+                      >Pastry bag on what pay attention</a
+                    >
+                    <p class="blog_date">23.07.2017</p>
+                    <button class="btn bckg_btn_pink btn_blog">
+                      More detailed
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="blog_block">
+                    <a href="" class="blog_block_img parent_img">
+                      <img
+                        src="images/other/337239_900.jpg"
+                        alt=""
+                        class="img_fluid"
+                      />
+                    </a>
+                    <a
+                      href=""
+                      class="color_pink underline blog_block_head ellipsis"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      A accusantium asperiores culpa Lorem ipsum dolor sit amet,
+                      consectetur adipisicing elit. A accusantium asperiores
+                      culpa Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. A accusantium asperiores culpa
+                    </a>
+                    <p class="blog_date">23.07.2017</p>
+                    <button class="btn bckg_btn_pink btn_blog">
+                      More detailed
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="blog_block">
+                    <a href="" class="blog_block_img parent_img">
+                      <img
+                        src="images/other/1461586271_fotki-s-canon-083.jpg"
+                        alt=""
+                        class="img_fluid"
+                      />
+                    </a>
+                    <a
+                      href=""
+                      class="color_pink underline blog_block_head ellipsis"
+                      >Pastry bag</a
+                    >
+                    <p class="blog_date">23.07.2017</p>
+                    <button class="btn bckg_btn_pink btn_blog">
+                      More detailed
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="blog_block">
+                    <a href="" class="blog_block_img parent_img">
+                      <img
+                        src="images/other/f58a9b3f8117.jpg"
+                        alt=""
+                        class="img_fluid"
+                      />
+                    </a>
+                    <a
+                      href=""
+                      class="color_pink underline blog_block_head ellipsis"
+                      >Pastry bag on what pay attention</a
+                    >
+                    <p class="blog_date">23.07.2017</p>
+                    <button class="btn bckg_btn_pink btn_blog">
+                      More detailed
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--=============================== blog and ======================================-->
+            </div>
+          </div>
+        </div>
+        <!--================================== Brands =======================-->
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box_head">
+                <span class="decor_line"></span>
+                <a href="" class="main_head">Brands</a>
+              </div>
+              <div class="brands">
+                <a href="" class="brand_block_img">
+                  <img src="images/other/dobrinski.png" alt="" />
+                </a>
+                <a href="" class="brand_block_img">
+                  <img src="images/other/glazur.png" alt="" />
+                </a>
+                <a href="" class="brand_block_img">
+                  <img src="images/other/shantil-1.png" alt="" />
+                </a>
+                <a href="" class="brand_block_img">
+                  <img src="images/other/dobrincki.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="" class="footer_logo text-center">
+              <img src="images/mini_logo.png" alt="" />
+            </a>
+            <p class="footer_address text-center">
+              Kharkiv Gamarnika str., 11-B
+            </p>
+          </div>
+          <div class="col-md-3">
+            <div class="footer_title">Contact phone number</div>
+            <div class="block_tell overflow_hid">
+              <p class="tell">+38 (057) 731-19-88</p>
+              <p class="tell">+38 (067) 525-26-26</p>
+              <p class="tell">+38 (099) 286-98-98</p>
+              <p class="tell">+38 (093) 703-66-60</p>
+            </div>
+          </div>
+          <div class="col-md-3 col_footer_link">
+            <div class="footer_title">Interesting article</div>
+            <p>
+              <a href="" class="underline footer_link"
+                >How to bake a cake without sugar</a
+              >
+            </p>
+            <p>
+              <a href="" class="underline footer_link"
+                >Puffs for a lazy hostess</a
+              >
+            </p>
+            <p>
+              <a href="" class="underline footer_link"
+                >So that the cupcakes don't burn</a
+              >
+            </p>
+          </div>
+          <div class="col-md-3 col_social text-right">
+            <div class="footer_title">Social network</div>
+            <ul class="footer_social">
+              <li>
+                <a href=""><i class="icon-vk"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="icon-you-tube"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="icon-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--============================== ajax loader ===================-->
+    <!-- <div id="floatingCirclesG">
+    <div class="f_circleG" id="frotateG_01"></div>
+    <div class="f_circleG" id="frotateG_02"></div>
+    <div class="f_circleG" id="frotateG_03"></div>
+    <div class="f_circleG" id="frotateG_04"></div>
+    <div class="f_circleG" id="frotateG_05"></div>
+    <div class="f_circleG" id="frotateG_06"></div>
+    <div class="f_circleG" id="frotateG_07"></div>
+    <div class="f_circleG" id="frotateG_08"></div>
+    <div class="f_circleG" id="frotateG_09"></div>
+    <div class="f_circleG" id="frotateG_10"></div>
+    <div class="f_circleG" id="frotateG_11"></div>
+    <div class="f_circleG" id="frotateG_12"></div>
+</div> -->
+    <div id="to-top" class="img-circle color_pink">
+      <i class="icon-chevron-rounded-solid"></i>
+    </div>
+    <script src="js/jquery-2.0.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.selectBox/jquery.selectBox.js"></script>
+    <script src="js/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="js/swiper-jquery/swiper.jquery.min.js"></script>
+    <script src="js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery-placeholder/jquery.placeholder-enhanced.min.js"></script>
+    <script src="js/jquery-dot-master/jquery.dotdotdot.min.js"></script>
+    <script src="js/init.js"></script>
+    <script></script>
+  </body>
+</html>

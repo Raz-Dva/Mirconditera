@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mirkonditera</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.selectBox/jquery.selectBox.css" rel="stylesheet">
+    <link href="css/swiper-jquery/swiper.min.css" rel="stylesheet"/>
+    <link href="css/css-icon/styles.css" rel="stylesheet">
+    <link href="css/main-style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <!--======================= navbar ==================-->
+        <nav class="navbar-inverse navbar-fixed-top navbar navbar_top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--======================== menu in navbar ================-->
+                    <ul class="navbar-nav nav navbar_header">
+                        <li>
+                            <a class="" href="/">
+                                <span>Главная</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" href="">
+                                <span>Доставка и оплата</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" href="">
+                                <span>Контакты  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" href="">
+                                <span>О нас </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--=======================navbar and==================-->
+        <div class="navbar_left_menu">
+            <div class="container">
+                <ul class="info_user_block">
+                    <!--============не авторизированый пользователь==================-->
+                    <!--<li>-->
+                        <!--<a href="#" class="btn_avtoriz">
+                            <i class="icon-user"></i>
+                            <span>Вход</span>
+                        </a>-->
+                        <!--============window autorize==================-->
+                        <!--<div class="box_popover" id="modal_auth">
+                            <button class="close">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                            <div class="head_popover overflow_hid">
+                                <p class="head_autorize color_brown pull-left">Авторизация</p>
+                                <a href="" class="link_reg underline pull-right color_pink">Регистрация</a>
+                            </div>
+                            <form id="loginForm" class="login_form form_default">
+                                <div class="form-group has-success">
+                                    <input type="text" class="form-control mask-phone"
+                                           name="" placeholder="Ваш телефон">
+                                    <div class="help-block"></div>
+                                </div>
+                                <div class="form-group has-error">
+                                    <input type="password" class="form-control"
+                                           name="" placeholder="Ваш пароль">
+                                    <div class="help-block">Это поле должно быть заполнено</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="loginform-rememberme"
+                                           name="LoginForm[rememberMe]"
+                                           value="1" checked="">
+                                    <label for="loginform-rememberme">Запомнить меня</label>
+                                    <a class="forgot_password color_pink underline" href="#">Забыли пароль?</a>
+                                    <div class="help-block"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn bckg_btn_pink btn_enter">Войти</button>
+                                </div>
+                            </form>
+                        </div>-->
+                        <!--============window autorize and==================-->
+                    <!--</li>
+                    <li>
+                        <a class="" href="">
+                            <span>Регистрация</span>
+                        </a>
+                    </li>-->
+                    <!--=============авторизированый пользователь==================-->
+                    <li>
+                        <a href="" class="btn_avtoriz oblique_delivery">
+                            <i class="icon-user"></i>
+                            <span>Гончаров Иван Николаевич</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <span>Выход</span>
+                        </a>
+                    </li>
+                    <!--====================================================-->
+                    <li class="item_basket_head">
+                        <a href="" class="btn_basket_head">
+                            <i class="icon-shoping-cart"></i>
+                            <span>99 999, 89 грн</span>
+                            <span class="badge">23</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--=====================form, logo, tell in  header =====================-->
+                <div class="col-md-4 col-lg-3 ">
+                    <form class="navbar-form form_search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Поиск">
+                            <button type="submit" class="btn btn-default btn_search top_center"><i
+                                    class="icon-search pull-left"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-lg-6 text-center">
+                    <a href="" class="block_logo">
+                        <img src="images/mir_conditera_logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="box_tell-header text-right">
+                        <button class="btn_call_back bckg_btn_pink" href="">
+                            <i class="icon-phone top_center"></i>
+                            Обратный звонок
+                        </button>
+                        <!--============window call back==================-->
+                        <div class="box_popover" id="modal_call_back">
+                            <button class="close">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                            <form class="call_back_form form_default">
+                                <div class="form-group">
+                                    <input type="text" class="form-control"
+                                           name="" placeholder="Ваш имя">
+                                    <div class="help-block"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control mask-phone"
+                                           name="" placeholder="Ваш телефон">
+                                    <div class="help-block"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn bckg_btn_pink btn_enter">Заказать звонок</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--=========== window call back and ==================-->
+                        <div class="block_tell overflow_hid">
+                            <p class="tell"><a href="">+38 (066) 138-78-57</a></p>
+                            <p class="tell">+38 (067) 525-26-26</p>
+                            <p class="tell">+38 (099) 286-98-98</p>
+                            <p class="tell">+38 (093) 703-66-60</p>
+                        </div>
+                    </div>
+                </div>
+                <!--==================== large menu=====================-->
+                <div class="col-xs-12">
+                    <ul class="menu_lg">
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-decor.png" alt=""></span>
+                                <span class="text_menu">Товары для декора</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="">Some longer text some longer text</a>
+                                    </li>
+                                    <li>
+                                        <a href="">text</a>
+                                    </li>
+                                    <li>
+                                        <a href="">text</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--==============================пример пункт меню без выпадающего списка=====================-->
+                        <!--<li class="">
+                            <a href="" class="">
+                                <span class="icon_menu"><img src="images/category-decor.svg" alt=""></span>
+                                <span class="text_menu">Товары для декора</span>
+                            </a>
+                        </li>-->
+                        <!--===================================================-->
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-instruments.png" alt=""></span>
+                                <span class="text_menu">Инструменты и инвентарь </span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Мастика</a></li>
+                                    <li><a href="">Айсинг</a></li>
+                                    <li><a href="">Пищевые добавки</a></li>
+                                    <li><a href="">Шоколад и глазури</a></li>
+                                    <li><a href="">Гели</a></li>
+                                    <li><a href="">Цветной сахар</a></li>
+                                    <li><a href="">Наполнители</a></li>
+                                    <li><a href="">Мука</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-ingridients.png" alt=""></span>
+                                <span class="text_menu">Ингредиенты</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing </a></li>
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-colors.png" alt=""></span>
+                                <span class="text_menu">Пищевые красители</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-equipment.png" alt=""></span>
+                                <span class="text_menu">Оборудование</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-print.png" alt=""></span>
+                                <span class="text_menu">Печать на сах-бумаге</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-packaging.png" alt=""></span>
+                                <span class="text_menu">Упаковка</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">
+                                <span class="icon_menu"><img src="images/icons/category-rent.png" alt=""></span>
+                                <span class="text_menu">Аренда инвентаря</span>
+                            </a>
+                            <div class="wrap_drop">
+                                <ul class="dropdown-menu">
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                    <li><a href="">text</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--==================== large menu and=====================-->
+            </div>
+        </div>
+    </header>
+    <!--============================== HEADER and===================-->
+    <main>
+        <div class="wrap_product_card">
+            <div class="container">
+                <div class="row">
+                    <!--======================================= breadcrumb ==============================-->
+                    <div class="col-xs-12">
+                        <ul class="breadcrumb breadcrumb_my">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Ингредиенты</a></li>
+                            <li class="active"><span>Айсинг</span></li>
+                        </ul>
+                    </div>
+                    <!--======================================= slider ==============================-->
+                    <div class="col-lg-5 col-xs-12">
+                        <div class="wrap_slider_card">
+                            <div class="swiper-container gallery-top">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/other/csm.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/337239_900.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/banner.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/f58a9b3f8117.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/vkt.png" alt=""></div>
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <!-- <div class="swiper-button-next swiper-button-white but_top_next">next</div>
+                             <div class="swiper-button-prev swiper-button-white but_top_prev">prev</div>-->
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/other/csm.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/337239_900.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/banner.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/f58a9b3f8117.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="images/other/vkt.png" alt=""></div>
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next  but_thumb_next"><i class="icon-caret-right"></i></div>
+                            <div class="swiper-button-prev but_thumb_prev"><i class="icon-caret-left"></i></div>
+
+                        </div>
+                    </div>
+                    <!--======================================= description product ==============================-->
+                    <div class="col-lg-7 col-xs-12">
+                        <div class="descript_row">
+                            <h1 class="head_card">Мастика универсальная Сriamo, белая 0,5кг</h1>
+                        </div>
+                        <div class="descript_row">
+                            <span class="descript_text_card">128 л/мин;</span>
+                            <span class="descript_text_card">2 ступенчатый;</span>
+                            <span class="descript_text_card">вес 10,4кг</span>
+                        </div>
+                        <div class="descript_row">
+                            <div class="descript_line">
+                                <span class="descript_title">Производитель:</span>
+                                <span class="descript_val"><a href="">Magic Colours UA</a></span>
+                            </div>
+                            <div class="descript_line">
+                                <span class="descript_title">Артикул:</span>
+                                <span class="descript_val">1295</span>
+                            </div>
+                            <div class="descript_line">
+                                <span class="descript_title">Наличие:</span>
+                                <span class="descript_val">В наличии</span>
+                            </div>
+                            <div class="descript_line">
+                                <span class="descript_title">Оценка товара:</span>
+                                <ul class="static_stars">
+                                    <li class="star_active"><i class="icon-star"></i></li>
+                                    <li class="star_active"><i class="icon-star"></i></li>
+                                    <li class="star_grey"><i class="icon-star"></i></li>
+                                    <li class="star_grey"><i class="icon-star"></i></li>
+                                    <li class="star_grey"><i class="icon-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="descript_line">
+                                <span class="descript_title">Lorem ipsum dolor sit amet:</span>
+                                <span class="descript_val">consectetur adipisicing elit. Consequuntur debitis dicta doloremque eos error expedita facilis fuga in inventore magnam minus nulla officia omnis pariatur quae quisquam, rem repellat temporibus.</span>
+                            </div>
+                        </div>
+                        <div class="descript_row display_flex">
+                            <!--====================select ===========================-->
+                            <select class="form-control slider_select select" title="">
+                                <option>Выберите массу товара</option>
+                                <option>50 грм</option>
+                                <option>Lorem ipsum dolor sit amet</option>
+                                <option>100 гр</option>
+                                <option>500 гр</option>
+                                <option>1000 гр</option>
+                            </select>
+                            <!--<p class="slider_select"> 500 грм</p>-->
+                            <!--==================== select and ===========================-->
+                            <p class="descript_cost color_brown">99 999 грн</p>
+                            <!--==================== number spiner  ===========================-->
+                            <div class="spin-number">
+                                <div class="spin-number-field">
+                                    <input class="countItem" type="text" data-multiplicity="1" value="1" title="">
+                                </div>
+                                <div class="spin-number-but but-minus"></div>
+                                <div class="spin-number-but but-plus"></div>
+                            </div>
+                            <!--==================== number spiner  and ===========================-->
+                            <button class="btn slider_btn bckg_btn_pink descript_btn">В корзину</button>
+                        </div>
+                        <div class="descript_row">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="head_delivery"><i class="icon-truck color_pink"></i><span>Способы доставки:</span>
+                                    </div>
+                                    <ul class="delivery">
+                                        <li class="delivery_item">Самовывоз</li>
+                                        <li class="delivery_item"> Новая почта</li>
+                                        <li class="delivery_item">Интайм</li>
+                                        <li class="delivery_item">Курьерская доставка (до метро)</li>
+                                        <li class="delivery_item">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Amet dolor, doloribus eligendi ex
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="head_delivery"><i class="icon-delivery55 color_pink"></i><span>Способы оплаты:</span>
+                                    </div>
+                                    <ul class="delivery">
+                                        <li class="delivery_item">Самовывоз</li>
+                                        <li class="delivery_item"> Новая почта</li>
+                                        <li class="delivery_item">Интайм</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--================================= tabs =========================-->
+                    <div class="col-xs-12">
+                        <ul class="nav nav-tabs card_nav_tabs">
+                            <li class="active"><a href="#home" data-toggle="tab" aria-expanded="false">Описание</a>
+                            </li>
+                            <li><a href="#tab_second" data-toggle="tab" aria-expanded="true">Характеристики</a>
+                            </li>
+                            <li><a href="#tab_third" data-toggle="tab" aria-expanded="true">Отзывы</a>
+                            </li>
+                            <li><a href="#win_review" data-toggle="modal" class="link_review">Оставьте отзыв</a>
+                            </li>
+
+                        </ul>
+                        <div id="myTabContent" class="tab-content card_tabs_content">
+                            <div class="tab-pane fade active in" id="home">
+                                <p>Raw denim you probably haven't heard of them jean shorts Austin.
+                                    Nesciunt
+                                    tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                                    tempor,
+                                    williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                                    keffiyeh
+                                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry
+                                    richardson ex
+                                    squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                                    cardigan
+                                    american apparel, butcher voluptate nisi qui.</p>
+                                <span>Raw denim you probably haven't heard of them jean shorts Austin.
+                                    Nesciunt
+                                    tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                                    tempor,
+                                    williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                                    keffiyeh
+                                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry
+                                    richardson ex
+                                    squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                                    cardigan
+                                    american apparel, butcher voluptate nisi qui.</span>
+                            </div>
+                            <div class="tab-pane fade" id="tab_second">
+                                <div class="descript_line">
+                                    <span class="descript_title">Производитель:</span>
+                                    <span class="descript_val">Magic Colours UA</span>
+                                </div>
+                                <div class="descript_line">
+                                    <span class="descript_title">Страна:</span>
+                                    <span class="descript_val">Германия</span>
+                                </div>
+                                <div class="descript_line">
+                                    <span class="descript_title">Вес:</span>
+                                    <span class="descript_val">500 грм</span>
+                                </div>
+                                <div class="descript_line">
+                                    <span class="descript_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit:</span>
+                                    <span class="descript_val">Asperiores autem beatae doloremque, ea enim, eveniet exercitationem hic, id laudantium magnam maiores nostrum numquam odit officia quo saepe tempore? Numquam, odio.</span>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab_third">
+                                <div class="review_block">
+                                    <i class="icon-quote"></i>
+                                    <div class="review_head">
+                                        <div class="review_about">
+                                            <span class="color_brown">Отзыв о</span>
+                                            <a href="" class="color_pink underline">Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.</a>
+                                        </div>
+                                        <div class="review_stars_block text-right">
+                                            <ul class="static_stars">
+                                                <li class="star_active"><i class="icon-star"></i></li>
+                                                <li class="star_active"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="review_text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Doloribus eligendi est, facilis illo incidunt iste libero magnam modi
+                                            necessitatibus
+                                            nesciunt nisi quae quas quibusdam quos ratione tenetur ut veritatis?
+                                            Ipsa.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Doloribus eligendi est, facilis illo incidunt iste libero magnam modi
+                                            necessitatibus
+                                            nesciunt nisi quae quas quibusdam quos ratione tenetur ut veritatis?
+                                            Ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Doloribus eligendi est, facilis illo incidunt iste libero magnam modi
+                                            necessitatibus
+                                            nesciunt nisi quae quas quibusdam quos ratione tenetur ut veritatis?
+                                            Ipsa.</p>
+                                    </div>
+                                    <div class="review_bottom">
+                                        <p class="review_author">Владимир Семеныч</p>
+                                        <p class="review_date text-right"> 24.05.2017</p>
+                                    </div>
+
+                                </div>
+                                <div class="review_block">
+                                    <i class="icon-quote"></i>
+                                    <div class="review_head">
+                                        <div class="review_about">
+                                            <span class="color_brown">Отзыв о</span>
+                                            <a href="" class="color_pink underline">Сахарная мастика Satin Ice</a>
+                                        </div>
+                                        <div class="review_stars_block text-right">
+                                            <ul class="static_stars">
+                                                <li class="star_active"><i class="icon-star"></i></li>
+                                                <li class="star_active"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="review_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Doloribus eligendi est, facilis illo incidunt iste libero magnam modi
+                                        necessitatibus
+                                        nesciunt nisi quae quas quibusdam quos ratione tenetur ut veritatis? Ipsa.
+                                    </div>
+                                    <div class="review_bottom">
+                                        <p class="review_author">Владимир Семеныч</p>
+                                        <p class="review_date text-right"> 24.05.2017</p>
+                                    </div>
+
+                                </div>
+                                <div class="review_block">
+                                    <i class="icon-quote"></i>
+                                    <div class="review_head">
+                                        <div class="review_about">
+                                            <span class="color_brown">Отзыв о</span>
+                                            <a href="" class="color_pink underline">Сахарная мастика Satin Ice</a>
+                                        </div>
+                                        <div class="review_stars_block text-right">
+                                            <ul class="static_stars">
+                                                <li class="star_active"><i class="icon-star"></i></li>
+                                                <li class="star_active"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                                <li class="star_grey"><i class="icon-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="review_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Doloribus eligendi est, facilis illo incidunt iste libero magnam modi
+                                        necessitatibus
+                                        nesciunt nisi quae quas quibusdam quos ratione tenetur ut veritatis? Ipsa.
+                                    </div>
+                                    <div class="review_bottom">
+                                        <p class="review_author">Владимир Семеныч</p>
+                                        <p class="review_date text-right"> 24.05.2017</p>
+                                    </div>
+
+                                </div>
+                                <!--======================= form in tab=============-->
+                                <!--<form action="" class="tab_form">
+                                    <div class="form-group">
+                                        <label class="control-label" for="user-name">Ваше имя:</label>
+                                        <input type="text" id="user-name" class="form-control"
+                                               name="" placeholder="Ваше имя">
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="user-review">Ваш
+                                            отзыв:</label>
+                                                <textarea id="user-review" class="form-control"
+                                                          name="" placeholder="Ваш отзыв"></textarea>
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <p><span class="text-danger">Внимание: </span>HTML не
+                                        поддерживается!
+                                        Используйте обычный текст!</p>
+                                    <div class="form-group">
+                                        <div class="wrap_form_rating">
+                                            <span class="tab_rating_text">Рейтинг</span>
+                                            <ul class="parent_stars">
+                                                <li class=""><span></span></li>
+                                                <li class=""><span></span></li>
+                                                <li class=""><span></span></li>
+                                                <li class=""><span></span></li>
+                                                <li><span></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://opt-sale.ins.co.ua/captcha?v=593a835177ec8"
+                                                     alt="">
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <label class="control-label"
+                                                       for="registerform-verifycode">Enter
+                                                    the code in
+                                                    the box up</label>
+                                                <input type="text"
+                                                       id="registerform-verifycode"
+                                                       class="form-control"
+                                                       name="RegisterForm[verifyCode]">
+                                            </div>
+                                        </div>
+                                        <div class="help-block"></div>
+                                    </div>
+                                </form>-->
+                                <!--======================= form in tab and=============-->
+                            </div>
+                        </div>
+                        <!--================================= modal window review не зарегистрирован=========================-->
+                         <!--<div id="win_review" class="modal fade">
+                             <div class="modal-dialog modal_review modal_default">
+                                 <div class="modal-content">
+                                     <div class="modal-header">
+                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                             <i class="glyphicon glyphicon-remove"></i>
+                                         </button>
+                                     </div>
+                                     <div class="modal-body">
+                                         <form action="" class="review_form form_default">
+                                             <div class="row">
+                                                 <div class="col-xs-12">
+                                                     <div class="form-group field-feedbackitems-comment required has-error">
+                                                         <textarea id="feedbackitems-comment" class="form-control"
+                                                                   name="FeedbackItems[comment]" title="" placeholder="Напишите ваш отзыв..."></textarea>
+                                                         <div class="help-block">  Это поле обязательно к заполнению</div>
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-sm-6">
+                                                     <div class="form-group field-feedbackitems-name required has-success">
+                                                         <input type="text" id="feedbackitems-name" class="form-control"
+                                                                name="FeedbackItems[name]" placeholder="Ваш Имя">
+                                                         <div class="help-block">Это поле обязательно к заполнению</div>
+                                                     </div>
+                                                     <div class="form-group field-feedbackitems-phone required">
+                                                         <input type="text" id="feedbackitems-phone"
+                                                                class="form-control"
+                                                                name="FeedbackItems[phone]" placeholder="Ваш email">
+                                                         <div class="help-block"></div>
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-sm-6">
+                                                     <div class="form-group text-center">
+                                                         <p class="str_form color_brown">Оцените товар</p>
+                                                         <ul class="parent_stars">
+                                                             <li class=""><i class="icon-star"></i></li>
+                                                             <li class=""><i class="icon-star"></i></li>
+                                                             <li class=""><i class="icon-star"></i></li>
+                                                             <li class=""><i class="icon-star"></i></li>
+                                                             <li class=""><i class="icon-star"></i></li>
+                                                         </ul>
+                                                     </div>
+
+                                                 </div>
+                                                 <div class="col-xs-12 text-center">
+                                                     <button type="submit" class="btn_call_back bckg_btn_pink">
+                                                         Оставьте отзыв
+                                                     </button>
+                                                 </div>
+                                             </div>
+                                         </form>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>-->
+                        <!--================================= modal window review зарегистрирован=========================-->
+                        <div id="win_review" class="modal fade">
+                            <div class="modal-dialog modal_review modal_default reg_user_win"> <!--добавить клас для зарегистрированого reg_user_win-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" class="review_form form_default">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="form-group field-feedbackitems-comment required">
+                                                        <textarea id="feedbackitems-comment" class="form-control"
+                                                                  name="FeedbackItems[comment]" title=""
+                                                                  placeholder="Напишите ваш отзыв..."></textarea>
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <p class="str_form color_brown text-right">Оцените товар</p>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <ul class="parent_stars">
+                                                                <li class=""><i class="icon-star"></i></li>
+                                                                <li class=""><i class="icon-star"></i></li>
+                                                                <li class=""><i class="icon-star"></i></li>
+                                                                <li class=""><i class="icon-star"></i></li>
+                                                                <li class=""><i class="icon-star"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 text-center">
+                                                    <button type="submit" class="btn_call_back bckg_btn_pink">
+                                                        Оставьте отзыв
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--================================= modal window review and  =========================-->
+
+                    </div>
+                    <div class="col-xs-12">
+                        <!--===============декоративный заголовок==================-->
+                        <div class="box_head">
+                            <span class="decor_line"></span>
+                            <h2 class="main_head">Сопутствующие Товары</h2>
+                        </div>
+                        <!--======================== slider Популярные Товары ============-->
+                        <div class="swiper_wrap">
+                            <div class="swiper-container swiper-main swiper_pop">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="slider_block_img">
+                                            <img src="images/other/slide_img1.jpg" alt="">
+                                        </a>
+                                        <a href="" class="slider_text ellipsis">Мастика для лепки Magiculata белая 0,5
+                                            кг
+                                            Magic Colours UA</a>
+                                        <div class="slider_choose">
+                                            <p class="slider_select"> 500 грм</p>
+                                            <p class="slider_cost">50 грн</p>
+                                        </div>
+                                        <button class="btn slider_btn bckg_btn_pink">В корзину</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="slider_block_img">
+                                            <img src="images/other/480_s.jpg" alt="">
+                                        </a>
+                                        <a href="" class="slider_text ellipsis">Мастика для лепки Magiculata белая 0,5
+                                            кг
+                                            Magic Colours UA</a>
+                                        <div class="slider_choose">
+                                            <select class="form-control slider_select select" title="">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <p class="slider_cost">50 грн</p>
+                                        </div>
+                                        <button class="btn slider_btn bckg_btn_pink">В корзину</button>
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+
+                                        <a href="" class="slider_block_img">
+                                            <img src="images/other/755.jpg" alt="">
+                                        </a>
+                                        <a href="" class="slider_text ellipsis">Мастика для лепки Magiculata белая 0,5
+                                            кг
+                                            Magic Colours UA</a>
+                                        <div class="slider_choose">
+                                            <select class="form-control slider_select select" title="">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <p class="slider_cost">50 грн</p>
+                                        </div>
+                                        <button class="btn slider_btn bckg_btn_pink">В корзину</button>
+
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <a href="" class="slider_block_img">
+                                            <img src="images/other/banner.jpg" alt="">
+                                        </a>
+                                        <a href="" class="slider_text ellipsis">Мастика для лепки Magiculata белая 0,5
+                                            кг
+                                            Magic Colours UA</a>
+                                        <div class="slider_choose">
+                                            <select class="form-control slider_select select" title="">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <p class="slider_cost">50 грн</p>
+                                        </div>
+                                        <button class="btn slider_btn bckg_btn_pink">В корзину</button>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="slider_block_img">
+                                            <img src="images/other/755.jpg" alt="">
+                                        </a>
+                                        <a href="" class="slider_text ellipsis">Мастика для лепки Magiculata белая 0,5
+                                            кг
+                                            Magic Colours UA</a>
+                                        <div class="slider_choose">
+                                            <!-- <select class="form-control slider_select" title="">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select> --><p class="slider_select"> 500 грм</p>
+                                            <p class="slider_cost">50 грн</p>
+                                        </div>
+                                        <button class="btn slider_btn bckg_btn_pink">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box_arrow_slide">
+                                <div class="swiper-button-prev icon-left-open-big pull-left but_pop_prev"></div>
+                                <div class="swiper-button-next icon-right-open-big pull-right but_pop_next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================================== бренды =======================-->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box_head">
+                        <span class="decor_line"></span>
+                        <a href="" class="main_head">бренды</a>
+                    </div>
+                    <div class="brands">
+                        <a href="" class="brand_block_img">
+                            <img src="images/other/dobrinski.png" alt="">
+                        </a>
+                        <a href="" class="brand_block_img">
+                            <img src="images/other/glazur.png" alt="">
+                        </a>
+                        <a href="" class="brand_block_img">
+                            <img src="images/other/shantil-1.png" alt="">
+                        </a>
+                        <a href="" class="brand_block_img">
+                            <img src="images/other/dobrincki.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="" class="footer_logo text-center">
+                    <img src="images/mini_logo.png" alt="">
+                </a>
+                <p class="footer_address text-center">г. Харьков ул. Гамарника, 11-Б</p>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_title">Контактный телефон</div>
+                <div class="block_tell overflow_hid">
+                    <p class="tell">+38 (057) 731-19-88</p>
+                    <p class="tell">+38 (067) 525-26-26</p>
+                    <p class="tell">+38 (099) 286-98-98</p>
+                    <p class="tell">+38 (093) 703-66-60</p>
+                </div>
+            </div>
+            <div class="col-md-3 col_footer_link">
+                <div class="footer_title">Интересные статьи</div>
+                <p>
+                    <a href="" class="underline footer_link">Как выпекать торт без сахара</a></p>
+                <p>
+                    <a href="" class="underline footer_link">Слойки для ленивой хозяюшки</a>
+                </p>
+                <p>
+                    <a href="" class="underline footer_link">Чтобы кексы не пригорали</a>
+                </p>
+            </div>
+            <div class="col-md-3 col_social text-right">
+                <div class="footer_title">Соц сети</div>
+                <ul class="footer_social ">
+                    <li><a href=""><i class="icon-vk"></i></a></li>
+                    <li><a href=""><i class="icon-you-tube"></i></a></li>
+                    <li><a href=""><i class="icon-instagram"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="to-top" class="img-circle color_pink"><i class="icon-chevron-rounded-solid"></i></div>
+<script src="js/jquery-2.0.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.selectBox/jquery.selectBox.js"></script>
+<script src="js/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="js/swiper-jquery/swiper.jquery.min.js"></script>
+<script src="js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+<script src="js/jquery-placeholder/jquery.placeholder-enhanced.min.js"></script>
+<script src="js/jquery-dot-master/jquery.dotdotdot.min.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>
